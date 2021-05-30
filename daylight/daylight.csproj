@@ -48,7 +48,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Generic.xaml">
+    <Compile Include="daylightSettings.xaml.cs">
+      <DependentUpon>daylightSettings.xaml</DependentUpon>
+    </Compile>
+    <Page Include="daylightSettings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
