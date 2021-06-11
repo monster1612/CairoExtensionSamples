@@ -60,8 +60,8 @@
                            Foreground="#55ffffff" />
             </StackPanel>
             <StackPanel>
-                <CheckBox Content="Show time left in the menu bar"/>
-                <CheckBox Content="      Also show seconds"/>
+                <CheckBox Name="chkAlwaysShowTime" Content="Show time left in the menu bar"/>
+                <CheckBox Name="chkShowSecondsInTime" Content="Also show seconds" Margin="25,0,0,0"/>
             </StackPanel>
         </StackPanel>
     </Grid>

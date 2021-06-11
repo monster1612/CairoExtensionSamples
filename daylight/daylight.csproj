@@ -31,8 +31,21 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CairoDesktop.Application">
+      <HintPath>..\..\..\..\..\..\Program Files\Cairo Shell\CairoDesktop.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="CairoDesktop.Infrastructure">
+      <HintPath>..\..\..\..\..\..\Program Files\Cairo Shell\CairoDesktop.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagedShell.Common">
+      <HintPath>..\..\..\..\..\..\Program Files\Cairo Shell\ManagedShell.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,9 +61,11 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="daylightMenuBarExtension.cs" />
     <Compile Include="daylightSettings.xaml.cs">
       <DependentUpon>daylightSettings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="daylightExtension.cs" />
     <Page Include="daylightSettings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -58,8 +73,16 @@
     <Compile Include="CustomControl1.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="daylightMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyRegistrant.cs" />
+    <Compile Include="daylightMenu.xaml.cs">
+      <DependentUpon>daylightMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -77,10 +100,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
