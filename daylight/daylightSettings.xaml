@@ -15,20 +15,6 @@
             <Setter Property="MinWidth"
                     Value="100" />
         </Style>
-        <Style TargetType="{x:Type TextBox}">
-            <Setter Property="Foreground"
-                    Value="#ffe9ecf4" />
-            <Setter Property="Background"
-                    Value="#ff111111" />
-            <Setter Property="Margin"
-                    Value="0" />
-            <Setter Property="Padding"
-                    Value="3" />
-            <Setter Property="Width"
-                    Value="240" />
-            <Setter Property="Height"
-                    Value="24" />
-        </Style>
         <Style TargetType="{x:Type CheckBox}">
             <Setter Property="Foreground"
                     Value="#ffe9ecf4" />
@@ -42,23 +28,8 @@
     </Window.Resources>
     <Grid Background="#ff191a1e">
         <StackPanel Orientation="Vertical" Margin="10">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="OpenWeatherMap API key:" />
-                <TextBox Name="ApiKeyTextBox" />
-            </StackPanel>
-            <TextBlock Text="You can obtain this for free from openweathermap.org."
-                       Foreground="#55ffffff" />
-            <StackPanel Name="LocationSettingsStackPanel">
-                <StackPanel Orientation="Horizontal">
-                    <Button Name="OpenLocationSettingsButton"
-                            Click="OpenLocationSettingsButton_OnClick"
-                            Height="24"
-                            Padding="10,0"
-                            Margin="5,20,0,0">Open Windows location settings</Button>
-                </StackPanel>
-                <TextBlock Text="Location must be enabled to retrieve weather information."
-                           Foreground="#55ffffff" />
-            </StackPanel>
+            <StackPanel Orientation="Horizontal"/>
+            <StackPanel Name="LocationSettingsStackPanel"/>
             <StackPanel>
                 <CheckBox Name="chkAlwaysShowTime" Content="Show time left in the menu bar"/>
                 <CheckBox Name="chkShowSecondsInTime" Content="Also show seconds" Margin="25,0,0,0"/>

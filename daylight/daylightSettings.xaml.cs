@@ -49,14 +49,11 @@ namespace daylight
 
             Properties.Settings.Default.ShowTimeLeft = chkAlwaysShowTime.IsChecked.Value;
 
+            Properties.Settings.Default.ShowSecondsInTime = chkShowSecondsInTime.IsChecked.Value;
+
             Properties.Settings.Default.Save();
 
             _instance = null;
-        }
-
-        private void OpenLocationSettingsButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            ShellHelper.ExecuteProcess("ms-settings:privacy-location");
         }
     }
 }
