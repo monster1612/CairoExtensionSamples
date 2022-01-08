@@ -16,13 +16,19 @@ using System.Windows.Shapes;
 namespace daylight
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for daylightMenu.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class daylightMenu : UserControl
     {
-        public Page1()
+        public daylightMenu()
         {
             InitializeComponent();
+        }
+
+        private void SettingsMenuItem_OnClick(object sender, RoutedEventArgs e)
+        {
+            daylightSettings.Instance.Show();
+            daylightSettings.Instance.Activate();
         }
     }
 }

@@ -1,6 +1,24 @@
 # Cairo Extension Samples
 Example extensions for [Cairo Desktop Environment](https://cairodesktop.com). Cairo extensions should be installed to the `%localappdata%\Cairo_Development_Team\Extensions` directory.
 
+---
+
+# unique extensions
+
+## Daylight **(currently WIP)**
+prevents the screen from going to sleep for a specific length of time, similar to [PowerToys Awake](https://docs.microsoft.com/en-us/windows/powertoys/awake).
+
+### usage
+* TBD: currently a work in progress.
+
+### attributions
+* this specific extension makes use of a modified version of the "half-moon" icon from the [Iconoir](https://iconoir.com/) library, which is released under the [MIT license](https://github.com/lucaburgio/iconoir/blob/master/LICENSE).
+* this extension is also based on the Weather extension (see below) and borrows code from the main Cairo project for implementation of the "icon" placement.
+---
+
+# upstream extensions from the Cairo development team follow below.
+
+
 ## Places.ShellFolders
 Adds additional shell folder locations to the Places menu.
 
